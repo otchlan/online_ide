@@ -1,15 +1,19 @@
-# programmer_app
+# online IDE
 
-W celu odpalenia serwera należy wpisać:
+Aplikacja deployowana jest w chmurze i pozwala na dostęp i edycję w czasie rzeczywistym w przyszłości narzędzie będzie wspierane przez AI w celu szybkiego prototypowania i rozwoju aplikacji.
+
+Rozruch:
 <pre>
 python3 app.py
 </pre>
 
 Aplikacja dostępna jest pod adresem
-http://127.0.0.1:5000/app
+http://127.0.0.1:5005/app
 
 
 
+
+---------------------------------------------------------------------------------------------------------
 ## TODO
 <pre>
 - [ ] Zadanie 1:
