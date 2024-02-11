@@ -1,0 +1,210 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: table;
+    center;
+    background: #000;
+}
+
+#projectLogo {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    z-index: 10;
+    width: 260px;
+    height: auto;
+
+    clip-path: inset(35px 11px 34px 12px); 
+}
+
+
+.video-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 112%;
+    min-height: 112%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    transform: translateX(-50%) translateY(-50%);
+    background: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.video-background iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;  /* centers the items horizontally */
+    align-items: center;      /* centers the items vertically */
+    gap: 20px;                /* space between dialog and carousel */
+}
+
+.display-container {
+    width: 60%;
+    margin-left: 10%;
+    margin-right: 5%;
+    height: 80vh; /* Adjust height if needed */
+    position: relative;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #fff;
+    background-color: #222;
+    border-radius: 10px;
+}
+
+.display-container img {
+    width: 100%; /* make width of image 100% of the container */
+    height: 100%; /* make height of image 100% of the container */
+    object-fit: contain; /* make the image fit inside the container while maintaining its aspect ratio */
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+    font-size: 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.dialog {
+    background-color: #333;
+    border-radius: 10px;
+    width: 20%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-left: 5%;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.input-area {
+    padding: 10px;
+    background-color: #2a2a2a; /* Same shade as dialog for visual consistency */
+}
+
+.messages {
+    flex-grow: 1;
+    overflow-y: auto;  /* changed from overlay to auto for better compatibility */
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* ensures the messages stack vertically */
+}
+
+.user-message, .ai-message {
+    padding: 8px 12px;  
+    border-radius: 15px;  
+    margin-bottom: 10px;  
+    max-width: 80%;  /* set maximum width to 80% */
+    word-wrap: break-word;  /* wrap long words onto the next line */
+    overflow-wrap: break-word; /* modern alternative to word-wrap */
+}
+
+.user-message {
+    background-color: #555;
+    color: white;
+    margin-left: auto; /* push the user message to the right */
+}
+
+.ai-message {
+    background-color: #777;
+    margin-right: auto; /* push the ai message to the left */
+}
+
+.input-area input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    float: left;
+
+}
+
+.input-area button {
+    padding: 10px 15px;
+    background-color: #0099ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-left: 5px;
+    float: right;
+}
+
+.messages::-webkit-scrollbar {
+    width: 10px; /* Adjust width for desired visual effect */
+}
+
+.messages::-webkit-scrollbar-track {
+    background: transparent; /* Make the track (background) transparent */
+}
+
+.messages::-webkit-scrollbar-thumb {
+    background-color: black; /* Set the thumb (the handle) to black */
+    border-radius: 10px;
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Make it slightly transparent when hovering */
+}
+
+.messages::-moz-scrollbar-track {
+    background: transparent;
+}
+
+.messages::-moz-scrollbar-thumb {
+    background-color: black;
+    border-radius: 10px;
+}
+
+.messages::-moz-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+div.loading {
+    border: 24px groove rebeccapurple;
+    display: table-cell;
+    border-radius: 999px;
+    animation: spin 1s linear infinite; /* Reduced the animation time for a quicker spin effect */
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    margin: auto; /* Center the loader */
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

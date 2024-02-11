@@ -1,0 +1,205 @@
+body {
+    background-color: #333;
+    color: #fff; 
+    font-family: "Courier New", monospace;
+    margin: 0;
+    padding: 0;
+ scrollbar-width: thin !important;
+    scrollbar-color: #888 #222 !important;
+
+}
+
+body::-webkit-scrollbar,
+.left-panel::-webkit-scrollbar,
+.bottom-section::-webkit-scrollbar {
+    width: 6px !important;
+    height: 6px !important;  /* This will style the height of the horizontal scrollbar */
+}
+
+body::-webkit-scrollbar-track,
+.left-panel::-webkit-scrollbar-track,
+.bottom-section::-webkit-scrollbar-track {
+    background: #222 !important;
+}
+
+body::-webkit-scrollbar-thumb,
+.left-panel::-webkit-scrollbar-thumb,
+.bottom-section::-webkit-scrollbar-thumb {
+    background: #004aad !important;
+}
+
+body::-webkit-scrollbar-thumb:hover,
+.left-panel::-webkit-scrollbar-thumb:hover,
+.bottom-section::-webkit-scrollbar-thumb:hover {
+    background: #555 !important;
+}
+
+#codeContent {
+    min-height: 100px; /* Ensure a minimum height */
+    white-space: pre-wrap; /* Wrap text */
+    overflow-wrap: break-word; /* Ensure long text wraps */
+    background-color: #222; /* Set a background color */
+    padding: 10px; /* Add some padding */
+    border-radius: 5px; /* Optional: add border-radius for aesthetics */
+}
+
+#codeContent:empty::before {
+    content: 'Start typing here...'; /* Placeholder text */
+    color: grey; /* Make the placeholder text grey */
+    font-style: italic; /* Italicize placeholder text */
+    display: block; /* Ensure it's treated as a block element */
+}
+
+
+.editor {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.folder {
+    padding: 5px;
+    margin: 5px;
+    background-color: #444;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.folder:hover {
+    background-color: #555;
+}
+
+#saveButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#saveButton:hover {
+    background-color: #45a049;
+}
+
+.top-section {
+    display: flex;
+    width: 100%;
+    height: 80%;
+}
+
+.bottom-section {
+    display: flex;
+    width: 100%;
+    height: 20%;
+}
+
+.left-panel, .right-panel, .terminal, .ai-box {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+     box-shadow: 
+        -5px 0px 10px -5px rgba(0, 0, 0, 0.5), /* left shadow */
+        5px 0px 10px -5px rgba(0, 0, 0, 0.5),  /* right shadow */
+        0px -5px 10px -5px rgba(0, 0, 0, 1.5), /* top shadow */
+        0px 5px 10px -5px rgba(0, 0, 0, 1.5);  /* bottom shadow */
+
+}
+
+.left-panel {
+    font-family: 'Courier New', Courier, monospace; /* Typical code font */
+    font-size: 14px; /* Adjust the size to your preference */
+    overflow-y: auto; /* Add a scrollbar if the content overflows */
+}
+
+.left-panel, .terminal {
+    border-right: 1px solid #000;
+}
+
+.terminal, .ai-box {
+    border-top: 1px solid #000;
+}
+
+.stripe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 79vh;
+    background-color: #004aad;
+    z-index: 1000;
+    transition: width 0.3s ease;
+}
+
+.stripe:hover {
+    width: 200px;
+}
+
+.stripe.expanded {
+    width: 200px;
+}
+
+.dialog {
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.stripe:hover .dialog {
+    opacity: 1;
+}
+
+.stripe-button {
+    cursor: pointer;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 20px;
+    height: 20px;
+}
+
+.stripe-button:hover {
+    background-color: #555;
+}
+
+.stripe.expanded .dialog {
+    opacity: 1;
+}   
+
+.dialog p, .dialog ul li {
+    font-size: 0.7em; /* Adjust this value as needed; 0.9em will make the font 10% smaller than its current size */
+}
+
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use the same color as the surrounding text */
+}
+
+a:hover {
+    text-decoration: underline; /* Maybe show underline on hover for better UX */
+}
+
+pre {
+    margin: 0;
+}
+
+.py-keyword {
+    color: #00B876;
+}
+
+.js-keyword {
+    color: #00FA57;
+}
+
+.html-tag {
+    color: #FA8B00;
+}
+
+.css-property {
+    color: yellow;
+}

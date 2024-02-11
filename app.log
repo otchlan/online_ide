@@ -1,0 +1,315 @@
+2023-12-15 19:46:31,544 - INFO - Starting Flask app on http://0.0.0.0:5005
+2023-12-15 19:46:31,570 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5005
+ * Running on http://10.0.2.15:5005
+2023-12-15 19:46:31,570 - INFO - [33mPress CTRL+C to quit[0m
+2023-12-15 19:46:31,572 - INFO -  * Restarting with stat
+2023-12-15 19:46:31,827 - INFO - Starting Flask app on http://0.0.0.0:5005
+2023-12-15 19:46:31,834 - WARNING -  * Debugger is active!
+2023-12-15 19:46:31,840 - INFO -  * Debugger PIN: 138-081-788
+2023-12-15 19:47:17,738 - INFO -  * Detected change in '/home/qwe/Pulpit/prog_app_py/app.py', reloading
+2023-12-15 19:47:17,833 - INFO -  * Restarting with stat
+2023-12-15 19:47:18,032 - INFO - Starting Flask app on http://0.0.0.0:5005
+2023-12-15 19:47:18,040 - WARNING -  * Debugger is active!
+2023-12-15 19:47:18,042 - INFO -  * Debugger PIN: 138-081-788
+2023-12-15 19:47:20,909 - INFO - Starting Flask app on http://0.0.0.0:5005
+2023-12-15 19:47:20,917 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5005
+ * Running on http://10.0.2.15:5005
+2023-12-15 19:47:20,917 - INFO - [33mPress CTRL+C to quit[0m
+2023-12-15 19:47:20,917 - INFO -  * Restarting with stat
+2023-12-15 19:47:21,186 - INFO - Starting Flask app on http://0.0.0.0:5005
+2023-12-15 19:47:21,194 - WARNING -  * Debugger is active!
+2023-12-15 19:47:21,195 - INFO -  * Debugger PIN: 138-081-788
+2023-12-15 19:47:27,193 - INFO - Generating folder tree
+2023-12-15 19:47:27,222 - INFO - 127.0.0.1 - - [15/Dec/2023 19:47:27] "GET /ide HTTP/1.1" 200 -
+2023-12-15 19:47:27,443 - INFO - 127.0.0.1 - - [15/Dec/2023 19:47:27] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-15 19:47:27,448 - INFO - 127.0.0.1 - - [15/Dec/2023 19:47:27] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-15 19:47:28,049 - INFO - Generating folder tree
+2023-12-15 19:47:28,139 - INFO - 127.0.0.1 - - [15/Dec/2023 19:47:28] "GET /app HTTP/1.1" 200 -
+2023-12-15 19:47:28,242 - INFO - 127.0.0.1 - - [15/Dec/2023 19:47:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-15 19:47:28,259 - INFO - 127.0.0.1 - - [15/Dec/2023 19:47:28] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-15 20:03:22,997 - INFO - Generating folder tree
+2023-12-15 20:03:23,000 - INFO - 127.0.0.1 - - [15/Dec/2023 20:03:23] "GET /ide HTTP/1.1" 200 -
+2023-12-15 20:03:23,053 - INFO - 127.0.0.1 - - [15/Dec/2023 20:03:23] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-15 20:03:23,117 - INFO - 127.0.0.1 - - [15/Dec/2023 20:03:23] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-15 20:03:23,548 - INFO - Generating folder tree
+2023-12-15 20:03:23,549 - INFO - 127.0.0.1 - - [15/Dec/2023 20:03:23] "GET /app HTTP/1.1" 200 -
+2023-12-15 20:03:23,601 - INFO - 127.0.0.1 - - [15/Dec/2023 20:03:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-15 20:03:23,611 - INFO - 127.0.0.1 - - [15/Dec/2023 20:03:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-15 20:03:33,450 - INFO - Fetching file content for: README.md
+2023-12-15 20:03:33,454 - INFO - 127.0.0.1 - - [15/Dec/2023 20:03:33] "GET /fetch_file_content?filename=README.md HTTP/1.1" 200 -
+2023-12-15 20:03:39,941 - INFO - Generating folder tree
+2023-12-15 20:03:39,943 - INFO - 127.0.0.1 - - [15/Dec/2023 20:03:39] "GET /ide HTTP/1.1" 200 -
+2023-12-15 20:03:40,072 - INFO - 127.0.0.1 - - [15/Dec/2023 20:03:40] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-15 20:03:40,106 - INFO - 127.0.0.1 - - [15/Dec/2023 20:03:40] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-15 20:03:40,376 - INFO - Generating folder tree
+2023-12-15 20:03:40,378 - INFO - 127.0.0.1 - - [15/Dec/2023 20:03:40] "GET /app HTTP/1.1" 200 -
+2023-12-15 20:03:40,476 - INFO - 127.0.0.1 - - [15/Dec/2023 20:03:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-15 20:03:40,492 - INFO - 127.0.0.1 - - [15/Dec/2023 20:03:40] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-15 20:08:23,301 - INFO - Generating folder tree
+2023-12-15 20:08:23,307 - INFO - 127.0.0.1 - - [15/Dec/2023 20:08:23] "GET /ide HTTP/1.1" 200 -
+2023-12-15 20:08:23,376 - INFO - 127.0.0.1 - - [15/Dec/2023 20:08:23] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-15 20:08:23,380 - INFO - 127.0.0.1 - - [15/Dec/2023 20:08:23] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-15 20:08:24,037 - INFO - Generating folder tree
+2023-12-15 20:08:24,043 - INFO - 127.0.0.1 - - [15/Dec/2023 20:08:24] "GET /app HTTP/1.1" 200 -
+2023-12-15 20:08:24,094 - INFO - 127.0.0.1 - - [15/Dec/2023 20:08:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-15 20:08:24,101 - INFO - 127.0.0.1 - - [15/Dec/2023 20:08:24] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-15 20:12:17,926 - INFO - Starting Flask app on http://0.0.0.0:5005
+2023-12-15 20:12:17,934 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5005
+ * Running on http://10.0.2.15:5005
+2023-12-15 20:12:17,934 - INFO - [33mPress CTRL+C to quit[0m
+2023-12-15 20:12:17,934 - INFO -  * Restarting with stat
+2023-12-15 20:12:18,069 - INFO - Starting Flask app on http://0.0.0.0:5005
+2023-12-15 20:12:18,079 - WARNING -  * Debugger is active!
+2023-12-15 20:12:18,080 - INFO -  * Debugger PIN: 138-081-788
+2023-12-15 20:12:22,039 - INFO - Generating folder tree
+2023-12-15 20:12:22,044 - INFO - 127.0.0.1 - - [15/Dec/2023 20:12:22] "GET /ide HTTP/1.1" 200 -
+2023-12-15 20:12:22,182 - INFO - 127.0.0.1 - - [15/Dec/2023 20:12:22] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-15 20:12:22,190 - INFO - 127.0.0.1 - - [15/Dec/2023 20:12:22] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-15 20:12:23,256 - INFO - Generating folder tree
+2023-12-15 20:12:23,274 - INFO - 127.0.0.1 - - [15/Dec/2023 20:12:23] "GET /app HTTP/1.1" 200 -
+2023-12-15 20:12:23,307 - INFO - 127.0.0.1 - - [15/Dec/2023 20:12:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-15 20:12:23,312 - INFO - 127.0.0.1 - - [15/Dec/2023 20:12:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-15 20:14:48,539 - INFO - Generating folder tree
+2023-12-15 20:14:48,545 - INFO - 127.0.0.1 - - [15/Dec/2023 20:14:48] "GET /ide HTTP/1.1" 200 -
+2023-12-15 20:14:48,680 - INFO - 127.0.0.1 - - [15/Dec/2023 20:14:48] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-15 20:14:48,685 - INFO - 127.0.0.1 - - [15/Dec/2023 20:14:48] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-15 20:14:49,181 - INFO - Generating folder tree
+2023-12-15 20:14:49,183 - INFO - 127.0.0.1 - - [15/Dec/2023 20:14:49] "GET /app HTTP/1.1" 200 -
+2023-12-15 20:14:49,228 - INFO - 127.0.0.1 - - [15/Dec/2023 20:14:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-15 20:14:49,231 - INFO - 127.0.0.1 - - [15/Dec/2023 20:14:49] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-15 20:18:29,571 - INFO - Generating folder tree
+2023-12-15 20:18:29,575 - INFO - 127.0.0.1 - - [15/Dec/2023 20:18:29] "GET /ide HTTP/1.1" 200 -
+2023-12-15 20:18:29,657 - INFO - 127.0.0.1 - - [15/Dec/2023 20:18:29] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-15 20:18:29,661 - INFO - 127.0.0.1 - - [15/Dec/2023 20:18:29] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-15 20:18:30,355 - INFO - Generating folder tree
+2023-12-15 20:18:30,357 - INFO - 127.0.0.1 - - [15/Dec/2023 20:18:30] "GET /app HTTP/1.1" 200 -
+2023-12-15 20:18:30,403 - INFO - 127.0.0.1 - - [15/Dec/2023 20:18:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-15 20:18:30,413 - INFO - 127.0.0.1 - - [15/Dec/2023 20:18:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-15 20:18:54,942 - INFO - 127.0.0.1 - - [15/Dec/2023 20:18:54] "[33mPOST /create_new_file HTTP/1.1[0m" 404 -
+2023-12-15 20:37:05,959 - INFO - Generating folder tree
+2023-12-15 20:37:05,966 - INFO - 127.0.0.1 - - [15/Dec/2023 20:37:05] "GET /ide HTTP/1.1" 200 -
+2023-12-15 20:37:06,112 - INFO - 127.0.0.1 - - [15/Dec/2023 20:37:06] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-15 20:37:06,120 - INFO - 127.0.0.1 - - [15/Dec/2023 20:37:06] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-15 20:37:07,044 - INFO - Generating folder tree
+2023-12-15 20:37:07,045 - INFO - 127.0.0.1 - - [15/Dec/2023 20:37:07] "GET /app HTTP/1.1" 200 -
+2023-12-15 20:37:07,137 - INFO - 127.0.0.1 - - [15/Dec/2023 20:37:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-15 20:37:07,140 - INFO - 127.0.0.1 - - [15/Dec/2023 20:37:07] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-16 12:58:47,798 - INFO - Generating folder tree
+2023-12-16 12:58:47,804 - INFO - 127.0.0.1 - - [16/Dec/2023 12:58:47] "GET /ide HTTP/1.1" 200 -
+2023-12-16 12:58:47,912 - INFO - 127.0.0.1 - - [16/Dec/2023 12:58:47] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-16 12:58:47,918 - INFO - 127.0.0.1 - - [16/Dec/2023 12:58:47] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-16 12:58:48,829 - INFO - Generating folder tree
+2023-12-16 12:58:48,830 - INFO - 127.0.0.1 - - [16/Dec/2023 12:58:48] "GET /app HTTP/1.1" 200 -
+2023-12-16 12:58:48,878 - INFO - 127.0.0.1 - - [16/Dec/2023 12:58:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-16 12:58:48,986 - INFO - 127.0.0.1 - - [16/Dec/2023 12:58:48] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-16 12:58:51,479 - INFO - Fetching file content for: app.html
+2023-12-16 12:58:51,543 - INFO - 127.0.0.1 - - [16/Dec/2023 12:58:51] "GET /fetch_file_content?filename=app.html HTTP/1.1" 200 -
+2023-12-16 12:59:08,629 - INFO - Generating folder tree
+2023-12-16 12:59:08,635 - INFO - 127.0.0.1 - - [16/Dec/2023 12:59:08] "GET /ide HTTP/1.1" 200 -
+2023-12-16 12:59:08,755 - INFO - 127.0.0.1 - - [16/Dec/2023 12:59:08] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-16 12:59:08,763 - INFO - 127.0.0.1 - - [16/Dec/2023 12:59:08] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-16 12:59:09,397 - INFO - Generating folder tree
+2023-12-16 12:59:09,398 - INFO - 127.0.0.1 - - [16/Dec/2023 12:59:09] "GET /app HTTP/1.1" 200 -
+2023-12-16 12:59:09,491 - INFO - 127.0.0.1 - - [16/Dec/2023 12:59:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-16 12:59:09,513 - INFO - 127.0.0.1 - - [16/Dec/2023 12:59:09] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-16 12:59:33,674 - INFO - Generating folder tree
+2023-12-16 12:59:33,743 - INFO - 127.0.0.1 - - [16/Dec/2023 12:59:33] "GET /ide HTTP/1.1" 200 -
+2023-12-16 12:59:33,839 - INFO - 127.0.0.1 - - [16/Dec/2023 12:59:33] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-16 12:59:33,843 - INFO - 127.0.0.1 - - [16/Dec/2023 12:59:33] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-16 12:59:34,494 - INFO - Generating folder tree
+2023-12-16 12:59:34,504 - INFO - 127.0.0.1 - - [16/Dec/2023 12:59:34] "GET /app HTTP/1.1" 200 -
+2023-12-16 12:59:34,550 - INFO - 127.0.0.1 - - [16/Dec/2023 12:59:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-16 12:59:34,561 - INFO - 127.0.0.1 - - [16/Dec/2023 12:59:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-16 12:59:41,541 - INFO - Fetching file content for: index.html
+2023-12-16 12:59:41,543 - INFO - 127.0.0.1 - - [16/Dec/2023 12:59:41] "GET /fetch_file_content?filename=index.html HTTP/1.1" 200 -
+2023-12-16 13:01:00,275 - INFO -  * Detected change in '/home/qwe/Pulpit/prog_app_py/app.py', reloading
+2023-12-16 13:01:00,635 - INFO -  * Restarting with stat
+2023-12-16 13:01:01,230 - INFO - Starting Flask app on http://0.0.0.0:5005
+2023-12-16 13:01:01,248 - WARNING -  * Debugger is active!
+2023-12-16 13:01:01,251 - INFO -  * Debugger PIN: 138-081-788
+2023-12-16 13:34:32,028 - INFO - Generating folder tree
+2023-12-16 13:34:32,049 - INFO - 127.0.0.1 - - [16/Dec/2023 13:34:32] "GET /ide HTTP/1.1" 200 -
+2023-12-16 13:34:32,137 - INFO - 127.0.0.1 - - [16/Dec/2023 13:34:32] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-16 13:34:32,143 - INFO - 127.0.0.1 - - [16/Dec/2023 13:34:32] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-16 13:34:32,582 - INFO - Generating folder tree
+2023-12-16 13:34:32,593 - INFO - 127.0.0.1 - - [16/Dec/2023 13:34:32] "GET /app HTTP/1.1" 200 -
+2023-12-16 13:34:32,723 - INFO - 127.0.0.1 - - [16/Dec/2023 13:34:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-16 13:34:32,785 - INFO - 127.0.0.1 - - [16/Dec/2023 13:34:32] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-16 13:34:38,944 - INFO - Fetching file content for: aaa__init__.py
+2023-12-16 13:34:38,955 - INFO - 127.0.0.1 - - [16/Dec/2023 13:34:38] "GET /fetch_file_content?filename=aaa__init__.py HTTP/1.1" 200 -
+2023-12-16 13:38:08,938 - INFO - Generating folder tree
+2023-12-16 13:38:09,036 - INFO - 127.0.0.1 - - [16/Dec/2023 13:38:09] "GET /ide HTTP/1.1" 200 -
+2023-12-16 13:38:09,169 - INFO - 127.0.0.1 - - [16/Dec/2023 13:38:09] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-16 13:38:09,211 - INFO - 127.0.0.1 - - [16/Dec/2023 13:38:09] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-16 13:38:10,222 - INFO - Generating folder tree
+2023-12-16 13:38:10,223 - INFO - 127.0.0.1 - - [16/Dec/2023 13:38:10] "GET /app HTTP/1.1" 200 -
+2023-12-16 13:38:10,260 - INFO - 127.0.0.1 - - [16/Dec/2023 13:38:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-16 13:38:10,431 - INFO - 127.0.0.1 - - [16/Dec/2023 13:38:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-16 13:38:12,456 - INFO - Fetching file content for: layout.html
+2023-12-16 13:38:12,467 - INFO - 127.0.0.1 - - [16/Dec/2023 13:38:12] "GET /fetch_file_content?filename=layout.html HTTP/1.1" 200 -
+2023-12-16 13:38:23,492 - INFO - Generating folder tree
+2023-12-16 13:38:23,493 - INFO - 127.0.0.1 - - [16/Dec/2023 13:38:23] "GET /ide HTTP/1.1" 200 -
+2023-12-16 13:38:23,581 - INFO - 127.0.0.1 - - [16/Dec/2023 13:38:23] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-16 13:38:23,584 - INFO - 127.0.0.1 - - [16/Dec/2023 13:38:23] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-16 13:38:23,715 - INFO - Generating folder tree
+2023-12-16 13:38:23,716 - INFO - 127.0.0.1 - - [16/Dec/2023 13:38:23] "GET /app HTTP/1.1" 200 -
+2023-12-16 13:38:23,764 - INFO - 127.0.0.1 - - [16/Dec/2023 13:38:23] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-16 13:38:23,764 - INFO - 127.0.0.1 - - [16/Dec/2023 13:38:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-16 13:38:26,575 - INFO - Fetching file content for: agent.py
+2023-12-16 13:38:26,579 - INFO - 127.0.0.1 - - [16/Dec/2023 13:38:26] "GET /fetch_file_content?filename=agent.py HTTP/1.1" 200 -
+2023-12-16 13:38:36,376 - INFO - Fetching file content for: main.html
+2023-12-16 13:38:36,378 - INFO - 127.0.0.1 - - [16/Dec/2023 13:38:36] "GET /fetch_file_content?filename=main.html HTTP/1.1" 200 -
+2023-12-16 13:41:40,371 - INFO - Generating folder tree
+2023-12-16 13:41:40,372 - INFO - 127.0.0.1 - - [16/Dec/2023 13:41:40] "GET /ide HTTP/1.1" 200 -
+2023-12-16 13:41:40,412 - INFO - 127.0.0.1 - - [16/Dec/2023 13:41:40] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-16 13:41:40,419 - INFO - 127.0.0.1 - - [16/Dec/2023 13:41:40] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-16 13:41:41,391 - INFO - Generating folder tree
+2023-12-16 13:41:41,392 - INFO - 127.0.0.1 - - [16/Dec/2023 13:41:41] "GET /app HTTP/1.1" 200 -
+2023-12-16 13:41:41,591 - INFO - 127.0.0.1 - - [16/Dec/2023 13:41:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-16 13:41:41,595 - INFO - 127.0.0.1 - - [16/Dec/2023 13:41:41] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-16 13:41:44,912 - INFO - Fetching file content for: data_mock.json
+2023-12-16 13:41:44,915 - INFO - 127.0.0.1 - - [16/Dec/2023 13:41:44] "GET /fetch_file_content?filename=data_mock.json HTTP/1.1" 200 -
+2023-12-16 13:43:30,002 - INFO - Generating folder tree
+2023-12-16 13:43:30,005 - INFO - 127.0.0.1 - - [16/Dec/2023 13:43:30] "GET /ide HTTP/1.1" 200 -
+2023-12-16 13:43:30,067 - INFO - 127.0.0.1 - - [16/Dec/2023 13:43:30] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-16 13:43:30,084 - INFO - 127.0.0.1 - - [16/Dec/2023 13:43:30] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-16 13:43:30,573 - INFO - Generating folder tree
+2023-12-16 13:43:30,576 - INFO - 127.0.0.1 - - [16/Dec/2023 13:43:30] "GET /app HTTP/1.1" 200 -
+2023-12-16 13:43:30,666 - INFO - 127.0.0.1 - - [16/Dec/2023 13:43:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-16 13:43:30,671 - INFO - 127.0.0.1 - - [16/Dec/2023 13:43:30] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-16 13:43:32,720 - INFO - Fetching file content for: data_mock.json
+2023-12-16 13:43:32,722 - INFO - 127.0.0.1 - - [16/Dec/2023 13:43:32] "GET /fetch_file_content?filename=data_mock.json HTTP/1.1" 200 -
+2023-12-16 13:47:52,653 - INFO - Generating folder tree
+2023-12-16 13:47:52,662 - INFO - 127.0.0.1 - - [16/Dec/2023 13:47:52] "GET /ide HTTP/1.1" 200 -
+2023-12-16 13:47:52,889 - INFO - 127.0.0.1 - - [16/Dec/2023 13:47:52] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-16 13:47:52,899 - INFO - 127.0.0.1 - - [16/Dec/2023 13:47:52] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-16 13:47:53,351 - INFO - Generating folder tree
+2023-12-16 13:47:53,354 - INFO - 127.0.0.1 - - [16/Dec/2023 13:47:53] "GET /app HTTP/1.1" 200 -
+2023-12-16 13:47:53,443 - INFO - 127.0.0.1 - - [16/Dec/2023 13:47:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-16 13:47:53,500 - INFO - 127.0.0.1 - - [16/Dec/2023 13:47:53] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-16 13:47:56,910 - INFO - Fetching file content for: index.html
+2023-12-16 13:47:56,913 - INFO - 127.0.0.1 - - [16/Dec/2023 13:47:56] "GET /fetch_file_content?filename=index.html HTTP/1.1" 200 -
+2023-12-16 13:48:07,334 - INFO - 127.0.0.1 - - [16/Dec/2023 13:48:07] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-16 13:48:07,342 - INFO - 127.0.0.1 - - [16/Dec/2023 13:48:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-16 13:48:15,642 - INFO - Generating folder tree
+2023-12-16 13:48:15,643 - INFO - 127.0.0.1 - - [16/Dec/2023 13:48:15] "GET /ide HTTP/1.1" 200 -
+2023-12-16 13:48:15,898 - INFO - 127.0.0.1 - - [16/Dec/2023 13:48:15] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-16 13:48:15,917 - INFO - 127.0.0.1 - - [16/Dec/2023 13:48:15] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-16 13:48:17,206 - INFO - Generating folder tree
+2023-12-16 13:48:17,207 - INFO - 127.0.0.1 - - [16/Dec/2023 13:48:17] "GET /app HTTP/1.1" 200 -
+2023-12-16 13:48:17,298 - INFO - 127.0.0.1 - - [16/Dec/2023 13:48:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-16 13:48:17,845 - INFO - 127.0.0.1 - - [16/Dec/2023 13:48:17] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-16 13:48:33,204 - INFO - Fetching file content for: main.css
+2023-12-16 13:48:33,205 - INFO - 127.0.0.1 - - [16/Dec/2023 13:48:33] "GET /fetch_file_content?filename=main.css HTTP/1.1" 200 -
+2023-12-16 14:22:13,360 - INFO - Generating folder tree
+2023-12-16 14:22:13,510 - INFO - 127.0.0.1 - - [16/Dec/2023 14:22:13] "GET /ide HTTP/1.1" 200 -
+2023-12-16 14:22:13,824 - INFO - 127.0.0.1 - - [16/Dec/2023 14:22:13] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-16 14:22:13,859 - INFO - 127.0.0.1 - - [16/Dec/2023 14:22:13] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-16 14:22:14,667 - INFO - Generating folder tree
+2023-12-16 14:22:14,670 - INFO - 127.0.0.1 - - [16/Dec/2023 14:22:14] "GET /app HTTP/1.1" 200 -
+2023-12-16 14:22:14,714 - INFO - 127.0.0.1 - - [16/Dec/2023 14:22:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-16 14:22:14,724 - INFO - 127.0.0.1 - - [16/Dec/2023 14:22:14] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-16 14:23:31,089 - INFO - Generating folder tree
+2023-12-16 14:23:31,095 - INFO - 127.0.0.1 - - [16/Dec/2023 14:23:31] "GET /ide HTTP/1.1" 200 -
+2023-12-16 14:23:31,171 - INFO - 127.0.0.1 - - [16/Dec/2023 14:23:31] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-16 14:23:31,192 - INFO - 127.0.0.1 - - [16/Dec/2023 14:23:31] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-16 14:23:32,266 - INFO - Generating folder tree
+2023-12-16 14:23:32,267 - INFO - 127.0.0.1 - - [16/Dec/2023 14:23:32] "GET /app HTTP/1.1" 200 -
+2023-12-16 14:23:32,354 - INFO - 127.0.0.1 - - [16/Dec/2023 14:23:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-16 14:23:32,364 - INFO - 127.0.0.1 - - [16/Dec/2023 14:23:32] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-16 14:35:09,155 - INFO - Fetching file content for: README.md
+2023-12-16 14:35:09,171 - INFO - 127.0.0.1 - - [16/Dec/2023 14:35:09] "GET /fetch_file_content?filename=README.md HTTP/1.1" 200 -
+2023-12-16 14:36:13,725 - INFO - Fetching file content for: app.html
+2023-12-16 14:36:13,729 - INFO - 127.0.0.1 - - [16/Dec/2023 14:36:13] "GET /fetch_file_content?filename=app.html HTTP/1.1" 200 -
+2023-12-16 14:36:39,712 - INFO - Fetching file content for: ide.html
+2023-12-16 14:36:39,718 - INFO - 127.0.0.1 - - [16/Dec/2023 14:36:39] "GET /fetch_file_content?filename=ide.html HTTP/1.1" 200 -
+2023-12-16 14:42:47,827 - INFO - Starting Flask app on http://0.0.0.0:5005
+2023-12-16 14:42:47,848 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5005
+ * Running on http://10.0.2.15:5005
+2023-12-16 14:42:47,849 - INFO - [33mPress CTRL+C to quit[0m
+2023-12-16 14:42:47,850 - INFO -  * Restarting with stat
+2023-12-16 14:42:48,186 - INFO - Starting Flask app on http://0.0.0.0:5005
+2023-12-16 14:42:48,195 - WARNING -  * Debugger is active!
+2023-12-16 14:42:48,200 - INFO -  * Debugger PIN: 138-081-788
+2023-12-16 14:43:00,291 - INFO - Generating folder tree
+2023-12-16 14:43:00,300 - INFO - 127.0.0.1 - - [16/Dec/2023 14:43:00] "GET /ide HTTP/1.1" 200 -
+2023-12-16 14:43:00,520 - INFO - 127.0.0.1 - - [16/Dec/2023 14:43:00] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-16 14:43:00,521 - INFO - 127.0.0.1 - - [16/Dec/2023 14:43:00] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-16 14:43:01,149 - INFO - Generating folder tree
+2023-12-16 14:43:01,164 - INFO - 127.0.0.1 - - [16/Dec/2023 14:43:01] "GET /app HTTP/1.1" 200 -
+2023-12-16 14:43:01,241 - INFO - 127.0.0.1 - - [16/Dec/2023 14:43:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-16 14:43:01,258 - INFO - 127.0.0.1 - - [16/Dec/2023 14:43:01] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-16 14:43:57,883 - INFO - 127.0.0.1 - - [16/Dec/2023 14:43:57] "GET / HTTP/1.1" 200 -
+2023-12-16 14:43:58,026 - INFO - 127.0.0.1 - - [16/Dec/2023 14:43:58] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-16 14:43:58,038 - INFO - 127.0.0.1 - - [16/Dec/2023 14:43:58] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2023-12-16 14:47:33,440 - INFO - Generating folder tree
+2023-12-16 14:47:33,442 - INFO - 127.0.0.1 - - [16/Dec/2023 14:47:33] "GET /ide HTTP/1.1" 200 -
+2023-12-16 14:47:33,517 - INFO - 127.0.0.1 - - [16/Dec/2023 14:47:33] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-16 14:47:33,525 - INFO - 127.0.0.1 - - [16/Dec/2023 14:47:33] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-16 14:47:34,511 - INFO - Generating folder tree
+2023-12-16 14:47:34,513 - INFO - 127.0.0.1 - - [16/Dec/2023 14:47:34] "GET /app HTTP/1.1" 200 -
+2023-12-16 14:47:34,531 - INFO - 127.0.0.1 - - [16/Dec/2023 14:47:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-16 14:47:34,709 - INFO - 127.0.0.1 - - [16/Dec/2023 14:47:34] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2023-12-16 14:50:51,209 - INFO - Fetching file content for: randomAGI_zadania.pdf
+2023-12-16 14:50:51,218 - INFO - 127.0.0.1 - - [16/Dec/2023 14:50:51] "GET /fetch_file_content?filename=randomAGI_zadania.pdf HTTP/1.1" 200 -
+2023-12-16 14:50:53,936 - INFO - Fetching file content for: app.log
+2023-12-16 14:50:53,940 - INFO - 127.0.0.1 - - [16/Dec/2023 14:50:53] "GET /fetch_file_content?filename=app.log HTTP/1.1" 200 -
+2023-12-18 15:43:43,502 - INFO - Starting Flask app on http://0.0.0.0:5005
+2023-12-18 15:43:43,528 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5005
+ * Running on http://10.0.2.15:5005
+2023-12-18 15:43:43,528 - INFO - [33mPress CTRL+C to quit[0m
+2023-12-18 15:43:43,576 - INFO -  * Restarting with watchdog (inotify)
+2023-12-18 15:43:43,752 - INFO - Starting Flask app on http://0.0.0.0:5005
+2023-12-18 15:43:43,760 - WARNING -  * Debugger is active!
+2023-12-18 15:43:43,763 - INFO -  * Debugger PIN: 911-362-084
+2023-12-18 15:44:05,195 - INFO - Rendering main.html
+2023-12-18 15:44:05,205 - INFO - 127.0.0.1 - - [18/Dec/2023 15:44:05] "GET /main HTTP/1.1" 200 -
+2023-12-18 15:44:05,668 - INFO - 127.0.0.1 - - [18/Dec/2023 15:44:05] "GET /static/css/main.css HTTP/1.1" 200 -
+2023-12-18 15:44:05,669 - INFO - 127.0.0.1 - - [18/Dec/2023 15:44:05] "GET /static/images/randomide.png HTTP/1.1" 200 -
+2023-12-18 15:44:30,940 - INFO - Generating folder tree
+2023-12-18 15:44:31,014 - INFO - 127.0.0.1 - - [18/Dec/2023 15:44:31] "GET /ide HTTP/1.1" 200 -
+2023-12-18 15:44:32,169 - INFO - 127.0.0.1 - - [18/Dec/2023 15:44:32] "[36mGET /static/css/ide.css HTTP/1.1[0m" 304 -
+2023-12-18 15:44:32,188 - INFO - 127.0.0.1 - - [18/Dec/2023 15:44:32] "[36mGET /static/images/unlock.svg HTTP/1.1[0m" 304 -
+2023-12-18 15:44:33,125 - INFO - Generating folder tree
+2023-12-18 15:44:33,184 - INFO - 127.0.0.1 - - [18/Dec/2023 15:44:33] "GET /app HTTP/1.1" 200 -
+2023-12-18 15:44:33,458 - INFO - 127.0.0.1 - - [18/Dec/2023 15:44:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2023-12-18 15:44:33,479 - INFO - 127.0.0.1 - - [18/Dec/2023 15:44:33] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2024-02-11 12:35:03,458 - INFO - Starting Flask app on http://0.0.0.0:5005
+2024-02-11 12:35:03,520 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5005
+ * Running on http://10.0.2.15:5005
+2024-02-11 12:35:03,521 - INFO - [33mPress CTRL+C to quit[0m
+2024-02-11 12:35:03,607 - INFO -  * Restarting with watchdog (inotify)
+2024-02-11 12:35:03,963 - INFO - Starting Flask app on http://0.0.0.0:5005
+2024-02-11 12:35:03,975 - WARNING -  * Debugger is active!
+2024-02-11 12:35:03,976 - INFO -  * Debugger PIN: 107-953-019
+2024-02-11 12:35:36,234 - INFO - Starting Flask app on http://0.0.0.0:5005
+2024-02-11 12:35:36,270 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5005
+ * Running on http://10.0.2.15:5005
+2024-02-11 12:35:36,270 - INFO - [33mPress CTRL+C to quit[0m
+2024-02-11 12:35:36,293 - INFO -  * Restarting with watchdog (inotify)
+2024-02-11 12:35:37,072 - INFO - Starting Flask app on http://0.0.0.0:5005
+2024-02-11 12:35:37,089 - WARNING -  * Debugger is active!
+2024-02-11 12:35:37,089 - INFO -  * Debugger PIN: 107-953-019
+2024-02-11 12:35:39,630 - INFO - Generating folder tree
+2024-02-11 12:35:39,683 - INFO - 127.0.0.1 - - [11/Feb/2024 12:35:39] "GET /ide HTTP/1.1" 200 -
+2024-02-11 12:35:39,890 - INFO - 127.0.0.1 - - [11/Feb/2024 12:35:39] "GET /static/css/ide.css HTTP/1.1" 200 -
+2024-02-11 12:35:39,906 - INFO - 127.0.0.1 - - [11/Feb/2024 12:35:39] "GET /static/images/unlock.svg HTTP/1.1" 200 -
+2024-02-11 12:35:42,486 - INFO - Generating folder tree
+2024-02-11 12:35:42,523 - INFO - 127.0.0.1 - - [11/Feb/2024 12:35:42] "GET /app HTTP/1.1" 200 -
+2024-02-11 12:35:42,631 - INFO - 127.0.0.1 - - [11/Feb/2024 12:35:42] "GET /static/css/styles.css HTTP/1.1" 200 -
+2024-02-11 12:35:42,809 - INFO - 127.0.0.1 - - [11/Feb/2024 12:35:42] "GET /static/js/script.js HTTP/1.1" 200 -
+2024-02-11 12:35:43,837 - INFO - 127.0.0.1 - - [11/Feb/2024 12:35:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

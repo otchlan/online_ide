@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/ide.css">
+    <title>IDE</title>
+</head>
+
+<body>
+    <div class="stripe">
+        <img src="static/images/unlock.svg" alt="Toggle Stripe" class="stripe-button" onclick="toggleStripe()" />
+
+        <div class="dialog">Project structure
+            {% for directory, subdirs, files in folder_tree %}
+            <p><b>{{ directory }}</b></p>
+            <ul>
+                {% for file in files %}
+                <!-- Adding an onclick function to fetch and display the file content -->
+                <li><a href="#" onclick="fetchFileContent('{{ file }}')">{{ file }}</a></li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
+        </div>
+
+    </div>
+
+    <div class="editor">
+        <div class="top-section">
+            <div class="left-panel" id="codeContainer">
+                <pre id="codeContent">Code</pre>
+            </div>
+            <div class="right-panel">
+                <iframe src="http://127.0.0.1:5005/app
+                " width="100%" height="100%"></iframe>
+            </div>
+        </div>
+
+        <div class="bottom-section">
+            <div class="terminal">
+                user@machine:~/Pulpit/prog_app_py$ python3 app.py<br>
+                * Serving Flask app "app" (lazy loading)<br>
+                * Environment: production<br>
+                WARNING: This is a development server. Do not use it in a production deployment.<br>
+                Use a production WSGI server instead.<br>
+                * Debug mode: off<br>
+                * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)<br>
+            </div>
+            <div class="ai-box">
+                <div class="ai-conversation">
+                    <p class="user-question"><span>Ty:</span> Zauważyłem, że mój model w `model.py` nie trenuje się poprawnie. Czy możesz pomóc mi zidentyfikować problem?</p>
+                    <p class="ai-response"><span>AI:</span> Analizuję plik "model.py"... </p>
+                    <p class="ai-response"><span>AI:</span> Znalazłem kilka potencjalnych problemów. Po pierwsze, używasz funkcji straty MSE dla problemu klasyfikacji, zamiast tego powinieneś użyć Cross-Entropy. Po drugie, wydaje się, że Twoja sieć ma zbyt dużą liczbę warstw dla ilości dostępnych danych, co może prowadzić do przeuczenia.</p>
+
+                    <p class="user-question"><span>Ty:</span> Dzięki za sugestie. A czy masz jakieś rekomendacje dotyczące architektury modelu?</p>
+                    <p class="ai-response"><span>AI:</span> Na podstawie dostępnych danych i problemu, który próbujesz rozwiązać, proponowałbym zmniejszenie liczby warstw w sieci. Możesz też rozważyć dodanie warstwy dropout, aby zapobiec przeuczeniu. Ponadto, skoro jest to problem klasyfikacji, warto by było zakończyć model warstwą softmax.</p>
+
+                    <p class="user-question"><span>Ty:</span> A co z hiperparametrami? Czy warto coś zmienić?</p>
+                    <p class="ai-response"><span>AI:</span> Bazując na aktualnych ustawieniach, proponuję zmniejszenie współczynnika uczenia oraz zastosowanie metody optymalizacji Adam zamiast SGD. Możesz również eksperymentować z różnymi wartościami dropoutu, aby znaleźć optymalne ustawienie dla Twojego modelu.</p>
+                </div>
+                </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleStripe() {
+            const stripe = document.querySelector('.stripe');
+            const buttonImage = document.querySelector('.stripe-button');
+
+            if (stripe.classList.contains('expanded')) {
+                buttonImage.src = "static/images/unlock.svg";
+            } else {
+                buttonImage.src = "static/images/lock.svg";
+            }
+
+            stripe.classList.toggle('expanded');
+        }
+
+        function highlightPython(code) {
+            return code.replace(/(def|return)/g, '<span class="py-keyword">$1</span>');
+        }
+
+        function highlightJS(code) {
+            return code.replace(/(function|return)/g, '<span class="js-keyword">$1</span>');
+        }
+
+        function highlightHTML(code) {
+            return code.replace(/(&lt;\/?[a-zA-Z]+&gt;)/g, '<span class="html-tag">$1</span>');
+        }
+
+        function highlightCSS(code) {
+            return code.replace(/([a-zA-Z\-]+)\s*:/g, '<span class="css-property">$1:</span>');
+        }
+
+        function fetchFileContent(filename) {
+            fetch(`/fetch_file_content?filename=${filename}`)
+                .then(response => response.text())
+                .then(content => {
+                    // Escaping content for HTML
+                    content = content.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+                    let highlightedContent;
+                    if (filename.endsWith('.py')) {
+                        highlightedContent = highlightPython(content);
+                    } else if (filename.endsWith('.js') || filename.endsWith('.tsx')) {
+                        highlightedContent = highlightJS(content);
+                    } else if (filename.endsWith('.html')) {
+                        highlightedContent = highlightHTML(content);
+                    } else if (filename.endsWith('.css')) {
+                        highlightedContent = highlightCSS(content);
+                    } else {
+                        highlightedContent = content;
+                    }
+
+                    // Setting highlighted content to codeContent
+                    document.getElementById('codeContent').innerHTML = highlightedContent;
+                });
+        }
+
+    </script>
+</body>
+
+</html>

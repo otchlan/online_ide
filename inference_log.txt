@@ -1,0 +1,26 @@
+2023-08-24 09:58:41,124 - INFO - Attempt 1 to access model gpt2-medium
+2023-08-24 09:58:42,194 - INFO - Successfully accessed model gpt2-medium on attempt 1
+2023-08-24 15:48:08,787 - INFO - Attempt 1 to access model gpt2-medium
+2023-08-24 15:48:13,871 - INFO - Successfully accessed model gpt2-medium on attempt 1
+2023-08-24 16:36:57,268 - INFO - Attempt 1 to access model gpt2-medium
+2023-08-24 16:36:58,091 - INFO - Successfully accessed model gpt2-medium on attempt 1
+2023-08-24 16:43:12,790 - INFO - Attempt 1 to access model gpt2-medium
+2023-08-24 16:43:17,283 - INFO - Successfully accessed model gpt2-medium on attempt 1
+2023-08-24 16:43:17,284 - INFO - Attempt 1 to access model gpt2-medium
+2023-08-24 16:43:21,992 - INFO - Successfully accessed model gpt2-medium on attempt 1
+2023-08-24 16:43:21,993 - INFO - Attempt 1 to access model gpt2-medium
+2023-08-24 16:43:25,473 - INFO - Successfully accessed model gpt2-medium on attempt 1
+2023-08-24 17:20:57,182 - INFO - Attempt 1 to access model meta-llama/Llama-2-7b
+2023-08-24 17:20:58,179 - WARNING - Error encountered: Model meta-llama/Llama-2-7b is currently loading. Retrying in 25.0 seconds.
+2023-08-24 17:21:23,202 - INFO - Attempt 2 to access model meta-llama/Llama-2-7b
+2023-08-24 17:21:23,983 - INFO - Successfully accessed model meta-llama/Llama-2-7b on attempt 2
+2023-08-24 17:21:23,984 - INFO - Attempt 1 to access model meta-llama/Llama-2-7b
+2023-08-24 17:21:24,699 - INFO - Successfully accessed model meta-llama/Llama-2-7b on attempt 1
+2023-08-24 17:21:24,699 - INFO - Attempt 1 to access model meta-llama/Llama-2-7b
+2023-08-24 17:21:25,419 - INFO - Successfully accessed model meta-llama/Llama-2-7b on attempt 1
+2023-08-24 17:24:31,849 - INFO - Attempt 1 to access model Llama-2-7b
+2023-08-24 17:24:32,606 - INFO - Successfully accessed model Llama-2-7b on attempt 1
+2023-08-24 17:24:32,606 - INFO - Attempt 1 to access model Llama-2-7b
+2023-08-24 17:24:33,319 - INFO - Successfully accessed model Llama-2-7b on attempt 1
+2023-08-24 17:24:33,320 - INFO - Attempt 1 to access model Llama-2-7b
+2023-08-24 17:24:34,045 - INFO - Successfully accessed model Llama-2-7b on attempt 1

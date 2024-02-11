@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Background</title>
+    <link rel="stylesheet" href="static/css/main.css">
+
+    <!-- Include the YouTube IFrame Player API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <style>
+        .messages {
+            flex-grow: 1;
+            overflow-y: overlay;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Loading Component Styles */
+        div.loading {
+            border: 24px groove rebeccapurple;
+            display: table-cell;
+            border-radius: 999px;
+            animation: spin 1s linear infinite; /* Reduced the animation time for a quicker spin effect */
+            width: 100px; /* Adjust as needed */
+            height: 100px; /* Adjust as needed */
+            margin: auto; /* Center the loader */
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+    <img id="projectLogo" src="static/images/randomide.png" alt="Project Logo">
+    <div class="video-background">
+        <div class="overlay"></div>
+        <div class="video-container">
+            <div id="player"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="dialog">
+            <div class="messages">
+                <div class="message user-message">Hi AI, how are you?</div>
+                <div class="message ai-message">Hello! I'm good. How can I assist you?</div>
+            </div>
+            <div class="input-area">
+                <input type="text" id="userInput" placeholder="Type your message..." />
+                <button id="sendButton">Send</button>
+            </div>
+        </div>
+        <div class="display-container">
+            <div class="loading" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script>
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '100%',
+                width: '100%',
+                videoId: 'jgm58cbu0kw',
+                events: {
+                    'onReady': onPlayerReady,
+                },
+                playerVars: {
+                    autoplay: 1,
+                    loop: 1,
+                    playlist: 'jgm58cbu0kw',
+                    mute: 1
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.setPlaybackQuality('hd1080');
+            event.target.playVideo();
+        }
+
+        document.querySelector('#sendButton').addEventListener('click', function() {
+            let inputField = document.querySelector('#userInput');
+            let userMessage = inputField.value;
+            addMessage(userMessage, 'user-message');
+            
+            let loadingComponent = document.querySelector('.loading');
+            loadingComponent.style.display = 'block';
+
+            fetch('/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: userMessage })
+            })
+            .then(response => response.json())
+            .then(data => {
+                setTimeout(() => {
+                    loadingComponent.style.display = 'none';
+                    addMessage(data.ai_msg, 'ai-message');
+                    displayImageInContainer(data.image);
+                }, 2000); // 2-second delay
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+            inputField.value = '';
+        });
+
+        function addMessage(message, className) {
+            let div = document.createElement('div');
+            div.className = 'message ' + className;
+            div.textContent = message;
+            let messagesContainer = document.querySelector('.messages');
+            messagesContainer.appendChild(div); // This adds the new message to the end of the container
+            
+            console.log('Scroll Height:', messagesContainer.scrollHeight); // Debug line
+            console.log('Current ScrollTop:', messagesContainer.scrollTop); // Debug line
+            
+            messagesContainer.scrollTop = messagesContainer.scrollHeight; // This scrolls to the latest message
+            
+            console.log('Updated ScrollTop:', messagesContainer.scrollTop); // Debug line
+        }
+        function displayImageInContainer(imageSrc) {
+            let displayContainer = document.querySelector('.display-container');
+            let oldImg = document.querySelector(".display-container").querySelector("img")
+            if(oldImg) {
+                displayContainer.removeChild(oldImg);
+            }
+            
+            let img = document.createElement("img")
+            img.alt = "Image from AI"
+            img.src = imageSrc;
+
+            displayContainer.append(img)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>App Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="top-container">
+            <div class="sub-container" id="div1">
+                <h2>Div 1</h2>
+                <p>File structure - when click main file is displayed with darker color and dependencing files are displayed brighter</p>
+
+                <p>Current Directory: {{ root_directory }}</p>
+                <ul>
+                    {% for folder, subfolders, files in folder_tree %}
+                        <li>
+                            <strong>{{ folder }}</strong>
+                            <ul>
+                                {% for subfolder in subfolders %}
+                                    <li>{{ subfolder }}/</li>
+                                {% endfor %}
+                                
+                                {% for file in files %}
+                                    <li><a href="#" class="file-link" data-filename="{{ file }}">{{ file }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="sub-container" id="div2">
+               <h2>Div 2</h2>
+               <div class="tabs">
+                   <button class="tablinks" onclick="switchTab(event, 'Code')">Code</button>
+                   <button class="tablinks" onclick="switchTab(event, 'App')">App</button>
+                   <button class="tablinks" onclick="switchTab(event, 'Changes')">Changes</button>
+               </div>
+               <div id="Code" class="tabcontent">
+                   <!-- Content for the Code tab goes here -->
+                   <pre id="codeDisplay"></pre>
+               </div>
+               <div id="App" class="tabcontent">
+                   <!-- Content for the App tab goes here -->
+                   Tu ma się wyświetlać okno lokalnego renderu strony
+               </div>
+               <div id="Changes" class="tabcontent">
+                   <!-- Content for the Changes tab goes here -->
+                   OKno które pokazuje jakie zmiany zostały zrobione w kodzie oraz wyświetla krótkie podsumowanie 
+               </div>
+           </div>
+        </div>
+       <div class="prompt-container">
+           <div class="sub-container" id="div4">
+               <h2>Div 4</h2>
+               <p>Prompt description here...</p>
+               <!-- Removed action since we are handling submission via AJAX -->
+               <form method="post">
+                    <div id="div6">
+                        <textarea name="prompt" id="textarea1" maxlength="2000"></textarea>
+                        <button type="submit" id="btn-send">Send</button>
+                    </div>
+               </form>
+               <div class="progress-bar-container">
+                   <div class="progress-bar" id="progressBar"></div>
+               </div>
+           </div>
+       </div>
+
+       <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+       <script>
+           $(document).ready(function() {
+               $(".file-link").click(function(event) {
+                   event.preventDefault();
+
+                   // Get the clicked file's name
+                   var fileName = $(this).data('filename');
+
+                   // Fetch the content of the file using AJAX
+                   $.get("/fetch_file_content?filename=" + fileName, function(data) {
+                       // Insert the content into codeDisplay
+                       $("#codeDisplay").html(data);
+                   });
+
+                   // This will automatically switch to the "Code" tab when a file is clicked
+                   switchTab(event, 'Code');
+               });
+
+               $("#btn-send").click(function(event) {
+            event.preventDefault();
+
+            var textValue = $("#textarea1").val();
+
+            // Reset and show the progress bar
+            $("#progressBar").width('0%');
+            $(".progress-bar-container").show();
+
+            $.post("/save_text", { prompt: textValue }, function(response) {
+                // Log the server response for now
+                console.log(response);
+
+                // Clear the textarea
+                $("#textarea1").val('');
+
+                // Simulate progress bar filling over 2 seconds
+                $("#progressBar").animate({ width: '100%' }, 2000, function() {
+                    // Optionally hide the progress bar after completion (or you can keep it visible)
+                    $(".progress-bar-container").hide();
+                });
+            });
+        });
+    });
+
+           function switchTab(evt, tabName) {
+               var i, tabcontent, tablinks;
+               tabcontent = document.getElementsByClassName("tabcontent");
+               for (i = 0; i < tabcontent.length; i++) {
+                   tabcontent[i].style.display = "none";
+               }
+               tablinks = document.getElementsByClassName("tablinks");
+               for (i = 0; i < tablinks.length; i++) {
+                   tablinks[i].classList.remove("active");
+               }
+               document.getElementById(tabName).style.display = "block";
+               evt.currentTarget.classList.add("active");
+           }
+
+           // Initialize the first tab as active
+           document.addEventListener('DOMContentLoaded', function() {
+               document.querySelector('.tablinks').click();
+           });
+       </script>
+
+
+</body>
+</html>

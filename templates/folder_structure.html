@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Folder Structure</title>
+</head>
+<body>
+    <h1>Folder Structure</h1>
+    <p>Current Directory: {{ root_directory }}</p>
+    <ul>
+        {% for folder, subfolders, files in folder_tree %}
+            <li>
+                <strong>{{ folder }}</strong>
+                <ul>
+                    {% for subfolder in subfolders %}
+                        <li>{{ subfolder }}/</li>
+                    {% endfor %}
+                    
+                    {% for file in files %}
+                        <li><a href="#" class="file-link" data-filename="{{ folder }}/{{ file }}">{{ file }}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+
+    </ul>
+</body>
+</html>

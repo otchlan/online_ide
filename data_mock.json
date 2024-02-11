@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "user_msg": "Create me, a simple layout, main page for a store website",
+        "ai_msg": "Here is a simple layout. What you want to adjust? Maybe you want to add some buttons, windows, different layout?",
+        "image": "static/images/web_sc1.png"
+    },
+    {
+        "id": 2,
+        "user_msg": "Change navbar, buttons must be bigger and background must be brighter",
+        "ai_msg": "Here you have adjusted navbar. What next?",
+        "image": "static/images/web_sc2.png"
+    },
+    {
+        "id": 3,
+        "user_msg": "Populate first row with photos of handmade bracelets, second row with products printed from 3d printer and the third row with sport balls",
+        "ai_msg": "Why did the AI go to school? To improve its learning rate!",
+        "image": "static/images/web_sc3.png"
+    },
+    {
+        "id": 4,
+        "user_msg": "I want add some deepth to that website",
+        "ai_msg": "OK, I've added shadows to counters. What mode should I change?",
+        "image": "static/images/web_sc4.png"
+    },
+    {
+        "id": 5,
+        "user_msg": "Create me a simple page where will be displayed product details",
+        "ai_msg": "OK, what do you think about that?",
+        "image": "static/images/web_sc5.png"
+    },
+      {
+        "id": 6,
+        "user_msg": "Make me a simple layout in Flutter, grid 2x2 and option dropdown menu",
+        "ai_msg": "Here you have a simple layout, what do you want to do next?",
+        "image": "static/images/mob1.png"
+    },
+      {
+        "id": 7,
+        "user_msg": "Use images from that Airtable database as a buttons: https://airtable.com/app7wXfoyOG3b2FJT/tblo8KAXtRWaxq7ZE/",
+        "ai_msg": "I've connected to Airtable database and use images from a collumn 'img' as a buttons",
+        "image": "static/images/mob2.png"
+    },
+      {
+        "id": 8,
+        "user_msg": "Add connect wallet button between, a grind and a button. Images must fill the buttons.",
+        "ai_msg": "Here it is, what do you want to do next?",
+        "image": "static/images/mob3.png"
+    },
+      {
+        "id": 9,
+        "user_msg": "When I click on the button popup to connect should be displayed",
+        "ai_msg": "Now you dont have logic to connect that wallet should work on that?",
+        "image": "static/images/mob4.png"
+    },
+      {
+        "id": 10,
+        "user_msg": "yes",
+        "ai_msg": "Here is a input dialog area for your wallet address",
+        "image": "static/images/mob5.png"
+    }
+]

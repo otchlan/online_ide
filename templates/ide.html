@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/ide.css">
+    <title>IDE</title>
+</head>
+
+<body>
+    <div class="stripe">
+        <img src="static/images/unlock.svg" alt="Toggle Stripe" class="stripe-button" onclick="toggleStripe()" />
+
+        <div class="dialog">Project structure
+            {% for directory, subdirs, files in folder_tree %}
+            <p><b>{{ directory }}</b></p>
+            <ul>
+                {% for file in files %}
+                <li><a href="#" onclick="fetchFileContent('{{ file }}')">{{ file }}</a></li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
+                <p id="selectedFolderPathDisplay"></p>
+                <button id="newFileButton" onclick="createNewFile(event)">Create New File</button>
+            </div>
+    </div>
+
+    <div class="editor">
+        <div class="top-section">
+            <div class="left-panel" id="codeContainer">
+                <pre id="codeContent" contenteditable="true" oninput="showSaveButton()">Code</pre>
+            </div>
+            <div class="right-panel">
+                <iframe src="http://127.0.0.1:5005/app" width="100%" height="100%"></iframe>
+            </div>
+        </div>
+
+        <div class="bottom-section">
+            <div class="terminal">TERMIANL</div>
+            <div class="ai-box">
+                <div class="ai-conversation">ASYSTENT</div>
+            </div>
+        </div>
+    </div>
+    <button id="saveButton" onclick="saveCode()" style="display: none;">Save</button>
+
+
+
+    <script>
+        var originalContent = '';
+        var folderTree = JSON.parse('{{ folder_tree | tojson | safe }}');
+        var selectedFolderPath = '';
+        
+        function toggleStripe() {
+            const stripe = document.querySelector('.stripe');
+            const buttonImage = document.querySelector('.stripe-button');
+
+            if (stripe.classList.contains('expanded')) {
+                buttonImage.src = "static/images/unlock.svg";
+            } else {
+                buttonImage.src = "static/images/lock.svg";
+            }
+
+            stripe.classList.toggle('expanded');
+        }
+
+        function highlightPython(code) {
+            return code.replace(/(def|return)/g, '<span class="py-keyword">$1</span>');
+        }
+
+        function highlightJS(code) {
+            return code.replace(/(function|return)/g, '<span class="js-keyword">$1</span>');
+        }
+
+        function highlightHTML(code) {
+            return code.replace(/(&lt;\/?[a-zA-Z]+&gt;)/g, '<span class="html-tag">$1</span>');
+        }
+
+        function highlightCSS(code) {
+            return code.replace(/([a-zA-Z\-]+)\s*:/g, '<span class="css-property">$1:</span>');
+        }
+
+        var currentFilename = null; // Track the current filename
+
+        function fetchFileContent(filename) {
+            restoreOriginalContent(); // Restore original content before loading new file content
+
+            fetch(`/fetch_file_content?filename=${filename}`)
+                .then(response => response.text())
+                .then(content => {
+                    // Escaping content for HTML
+                    content = content.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+                    let highlightedContent;
+                    if (filename.endsWith('.py')) {
+                        highlightedContent = highlightPython(content);
+                    } else if (filename.endsWith('.js') || filename.endsWith('.tsx')) {
+                        highlightedContent = highlightJS(content);
+                    } else if (filename.endsWith('.html')) {
+                        highlightedContent = highlightHTML(content);
+                    } else if (filename.endsWith('.css')) {
+                        highlightedContent = highlightCSS(content);
+                    } else {
+                        highlightedContent = content;
+                    }
+
+                    // Setting highlighted content to codeContent
+                    document.getElementById('codeContent').innerHTML = highlightedContent;
+
+                    currentFilename = filename; // Update the current filename
+                    document.getElementById('codeContent').setAttribute('contenteditable', 'true'); // Enable editing
+                    document.getElementById('saveButton').style.display = 'none'; // Initially hide the save button
+                });
+        }
+
+        function showSaveButton() {
+            document.getElementById('saveButton').style.display = 'block';
+        }
+
+        function saveCode() {
+            if (!currentFilename) {
+                console.log("No file selected for saving.");
+                return;
+            }
+
+            var codeContent = document.getElementById('codeContent').innerText;
+            console.log("Saving code:", codeContent);
+
+            fetch('/save_code', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ code: codeContent, filename: currentFilename })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Response from server:", data.message);
+                document.getElementById('saveButton').style.display = 'none';
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        }
+
+        function disableEditing() {
+            document.getElementById('codeContent').setAttribute('contenteditable', 'false'); // Disable editing
+            document.getElementById('codeContent').innerText = 'Please select a file to edit'; // Show message
+            currentFilename = null; // Reset the current filename
+        }
+
+        disableEditing();
+
+        function createNewFile(event) {
+            if (event) {
+                event.preventDefault();
+            }
+
+            originalContent = document.getElementById('codeContainer').innerHTML;
+
+            var codeContainer = document.getElementById('codeContainer');
+            codeContainer.innerHTML = '';
+
+            folderTree.forEach(function(folder) {
+                var folderDiv = document.createElement('div');
+                folderDiv.innerText = folder[0]; // Assuming folder[0] is the directory name
+                folderDiv.className = 'folder';
+                folderDiv.onclick = function() { selectFolderForNewFile(folder[0]); };
+                codeContainer.appendChild(folderDiv);
+            });
+
+            var inputField = document.createElement('input');
+            inputField.type = 'text';
+            inputField.id = 'newFileName';
+            inputField.placeholder = 'Enter new file name here...';
+            codeContainer.appendChild(inputField);
+
+            var createButton = document.createElement('button');
+            createButton.innerText = 'Create File';
+            createButton.onclick = function() { createFileInSelectedFolder(); };
+            codeContainer.appendChild(createButton);
+        }
+
+        var selectedFolderPath = '';
+
+        function selectFolderForNewFile(folderPath) {
+            console.log('Function selectFolderForNewFile called with path:', folderPath);
+            selectedFolderPath = folderPath;
+
+            var pathDisplay = document.getElementById('selectedFolderPathDisplay');
+            if (pathDisplay) {
+                console.log('Updating display path to:', folderPath);
+                pathDisplay.innerText = 'Selected Path: ' + folderPath;
+            } else {
+                console.error('Failed to find the path display element.');
+            }
+        }
+
+        function createFileInSelectedFolder() {
+            var filename = document.getElementById('newFileName').value;
+            if (selectedFolderPath && filename) {
+                var fullPath = selectedFolderPath + '/' + filename;
+                fetch('/create_new_file', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ filename: fullPath })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data.message);
+                    // Refresh the project structure or notify the user
+                })
+                .catch(error => console.error('Error:', error));
+            }
+        }
+
+        function restoreOriginalContent() {
+            var codeContainer = document.getElementById('codeContainer');
+            if (originalContent !== '') {
+                codeContainer.innerHTML = originalContent; // Restore the original content
+            }
+            // Reset currentFilename and hide save button as necessary
+            currentFilename = null;
+            document.getElementById('saveButton').style.display = 'none';
+        }
+
+
+    </script>
+</body>
+
+</html>
